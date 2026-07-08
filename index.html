@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Mini Dicionário Changana - Aprenda a Falar Changana com Mussagy Domingos Subuana Nacar">
+    <title>Aprenda a Falar Changana - Guia Completo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #e3f2fd, #f7f8fb);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            background: #ffffff;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            padding: 30px;
+            text-align: center;
+            overflow: hidden;
+            margin-bottom: 70px; /* espaço para o botão fixo */
+        }
+
+        .cover-image {
+            width: 100%;
+            height: auto;
+            max-height: 280px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            color: #2e3d58;
+        }
+
+        p {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .author {
+            font-style: italic;
+            font-size: 12px;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .download-button, .whatsapp-button, .send-comment {
+            background-color: #2d9cdb;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 30px;
+            font-size: 15px;
+            cursor: pointer;
+            width: 80%;
+            max-width: 350px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .download-button:hover, .whatsapp-button:hover, .send-comment:hover {
+            transform: scale(1.04);
+            background-color: #2584b2;
+        }
+
+        .whatsapp-button {
+            background-color: #25D366;
+        }
+
+        /* Botão fixo no rodapé */
+        .fixed-download {
+            position: fixed;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #2d9cdb;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 14px 35px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 100;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .fixed-download:hover {
+            background-color: #1e84c0;
+            transform: translateX(-50%) scale(1.05);
+        }
+
+        .comment-box {
+            margin-top: 25px;
+            text-align: left;
+        }
+
+        .comment-box label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+            color: #444;
+        }
+
+        .comment-box textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 13px;
+            resize: none;
+            margin-bottom: 12px;
+        }
+
+        footer {
+            margin-top: 25px;
+            font-size: 12px;
+            color: #888;
+        }
+
+        footer a {
+            color: #2d9cdb;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.6rem; }
+            .container { padding: 20px; width: 95%; }
+            .download-button, .whatsapp-button, .send-comment { width: 100%; font-size: 14px; }
+            .fixed-download { width: 90%; border-radius: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="I1.png" alt="Imagem de Capa" class="cover-image">
+
+        <h1>Aprenda a Falar Changana</h1>
+        <p><strong>Mini Dicionário em Changana</strong></p>
+        <p>Guia completo para aprender a falar Changana com palavras e frases essenciais.</p>
+
+        <p class="author">Autor: Mussagy Domingos Subuana Nacar</p>
+        <p class="author">Cidade da Beira, 2025</p>
+
+        <div class="button-group">
+            <a href="https://wa.me/258866154643" target="_blank">
+                <button class="whatsapp-button">💬 Contate-me no WhatsApp</button>
+            </a>
+        </div>
+
+        <div class="comment-box">
+            <label for="comment">💭 Deixe seu comentário sobre o dicionário:</label>
+            <textarea id="comment" placeholder="Escreva aqui..."></textarea>
+            <button class="send-comment" onclick="sendWhatsAppComment()">Enviar Comentário</button>
+        </div>
+
+        <footer>
+            <p>Plataforma criada por <a href="mailto:mussagy@domingos.com">Mussagy Domingos Subuana Nacar</a></p>
+        </footer>
+    </div>
+
+    <!-- Botão fixo sempre visível -->
+    <a href="https://www.mediafire.com/file/w1j2ckrgmiyn98v/Mini+Dicion%C3%A1rio+Changana.pdf/file" target="_blank">
+        <button class="fixed-download">📘 Baixar Dicionário</button>
+    </a>
+
+    <script>
+        function sendWhatsAppComment() {
+            const comment = document.getElementById('comment').value;
+            if(comment.trim() === "") {
+                alert("Por favor, escreva um comentário antes de enviar!");
+                return;
+            }
+            const phone = "258866154643";
+            const message = encodeURIComponent("Comentário sobre o Mini Dicionário Changana:\n" + comment);
+            window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+        }
+    </script>
+</body>
+</html>
